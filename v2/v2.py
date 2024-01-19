@@ -1,7 +1,7 @@
 # This iteration uses the REINFORCE ML algorithm. I followed the tutorial on the Farama Gymnasium tutorial. Their solution was for Mujoco's Inverted Pendulum
 # while I used CartPole so I had to make some minor adjustments
-# The first 20 episodes avg points: 17
-# Last 20 episodes avg points: 450
+# The first 20 episodes avg points: 12.1
+# Last 20 episodes avg points: 395.72
 
 from reinforce import *
 import gymnasium as gym
@@ -47,7 +47,14 @@ for episode in range(total_num_episodes):
   reward_over_episodes.append(wrapped_env.return_queue[-1])
   agent.update()
 
+first_20 = [x[0] for x in reward_over_episodes[0:20]]
+print("First 20:", first_20)
+avg_first_20 = sum(first_20) / 20
+print("Average of first 20:", avg_first_20)
 
-print("First 20:", [x[0] for x in reward_over_episodes[0:20]])
-print("Last 20:", [x[0] for x in reward_over_episodes[-20:]])
-print("Total time:", t0 - time.time())
+last_20 = [x[0] for x in reward_over_episodes[-20:]]
+print("Last 20:", last_20)
+avg_last_20 = sum(last_20) / 20
+print("Average of last 20:", avg_last_20)
+
+print("Total time:", time.time() - t0)

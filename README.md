@@ -22,6 +22,6 @@ v1.2 came after I realized that the score of v1.1 was bad was because it swings 
 
 ## v2/REINFORCE AI
 
-### Average score after 5000 episodes: 450
+### Average score after 5000 episodes: 395.72
 
 This version I followed the REINFORCE tutorial on Farama's Gymnasium documentation. Their solution was using Mujoco's Inverted Pendulum while I was using CartPole so I had to make minor tweaks to make it run correctly.
