@@ -1,5 +1,5 @@
 # This iteration was to learn how to use gymnasium and my very first try with anything ai!
-# Average steps: 22.2726
+# Average score: 22.2726
 import gymnasium as gym
 import numpy as np
 import time

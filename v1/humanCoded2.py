@@ -1,17 +1,18 @@
 # This iteration was to try to make a basic human solution. More importantly learning more about observation.
 # This algorithm is trying to simply keep the pole angle at 0 while also not swinging the momentum too much
-# Average steps: 500
+# Average score: 500
 import gymnasium as gym
 import numpy as np
 import time
 
-# env = gym.make('CartPole-v1', render_mode='human')
-env = gym.make('CartPole-v1', render_mode='rgb_array')
+env = gym.make('CartPole-v1', render_mode='human')
+# env = gym.make('CartPole-v1', render_mode='rgb_array')
 observation, info = env.reset()
 
 # print(env.observation_space) 
 
-episodes = 100
+# episodes = 100
+episodes = 5
 episodeSteps = 500
 
 totalScore=0
