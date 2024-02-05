@@ -8,7 +8,7 @@ import torch.nn as nn
 from torch.distributions.normal import Normal
 from policyNetwork import *
 
-class REINFORCE:
+class REINFROCE:
   def __init__(self, obs_space_dims, action_space_dims):
     self.learning_rate = .0001 # Learning rate for policy optimization
     self.gamma = .99 # Discount factor

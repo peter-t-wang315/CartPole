@@ -3,7 +3,7 @@
 # The first 20 episodes avg points: 12.1
 # Last 20 episodes avg points: 395.72
 
-from reinforce import *
+from reinfroce import *
 import gymnasium as gym
 import random
 import pandas as pd
@@ -27,7 +27,7 @@ obs_space_dims = env.observation_space.shape[0]
 # action_space_dims = env.action_space
 action_space_dims = 1
 
-agent = REINFORCE(obs_space_dims, action_space_dims)
+agent = REINFROCE(obs_space_dims, action_space_dims)
 reward_over_episodes = []
 
 for episode in range(total_num_episodes):
